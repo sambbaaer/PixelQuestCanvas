@@ -1,0 +1,445 @@
+/* Admin Dashboard */
+.pqc-admin-wrapper {
+    max-width: 1200px;
+    margin: 20px 0;
+}
+
+.pqc-admin-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+}
+
+.pqc-admin-header h1 {
+    margin: 0 0 10px 0;
+    font-size: 28px;
+    font-weight: 300;
+}
+
+.pqc-admin-header p {
+    margin: 0;
+    opacity: 0.9;
+    font-size: 16px;
+}
+
+/* Stats Cards */
+.pqc-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.pqc-stat-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #667eea;
+    transition: transform 0.2s ease;
+}
+
+.pqc-stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.pqc-stat-number {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.pqc-stat-label {
+    color: #666;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.pqc-stat-change {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.pqc-stat-change.positive {
+    color: #4CAF50;
+}
+
+.pqc-stat-change.negative {
+    color: #f44336;
+}
+
+/* Settings Forms */
+.pqc-settings-section {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.pqc-settings-section h2 {
+    margin-top: 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e9ecef;
+    color: #333;
+}
+
+.pqc-form-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.pqc-form-table th {
+    width: 200px;
+    text-align: left;
+    padding: 15px 20px 15px 0;
+    vertical-align: top;
+    font-weight: 600;
+    color: #333;
+}
+
+.pqc-form-table td {
+    padding: 15px 0;
+    vertical-align: top;
+}
+
+.pqc-form-table input[type="number"],
+.pqc-form-table input[type="text"],
+.pqc-form-table select {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.2s ease;
+}
+
+.pqc-form-table input:focus,
+.pqc-form-table select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
+}
+
+.pqc-form-description {
+    color: #666;
+    font-size: 13px;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+/* Color Picker */
+.pqc-color-picker-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    max-width: 400px;
+}
+
+.pqc-color-picker-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pqc-color-picker-item label {
+    font-weight: 500;
+    min-width: 60px;
+}
+
+.pqc-color-picker-item input[type="color"] {
+    width: 50px;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Canvas Management */
+.pqc-canvas-management {
+    text-align: center;
+    padding: 20px;
+}
+
+.pqc-canvas-preview {
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    margin: 20px auto;
+    display: inline-block;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    overflow: auto;
+}
+
+.pqc-canvas-controls {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.pqc-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.pqc-btn-primary {
+    background: #667eea;
+    color: white;
+}
+
+.pqc-btn-primary:hover {
+    background: #5a6fd8;
+    transform: translateY(-1px);
+}
+
+.pqc-btn-danger {
+    background: #f44336;
+    color: white;
+}
+
+.pqc-btn-danger:hover {
+    background: #d32f2f;
+    transform: translateY(-1px);
+}
+
+.pqc-btn-secondary {
+    background: #6c757d;
+    color: white;
+}
+
+.pqc-btn-secondary:hover {
+    background: #545b62;
+    transform: translateY(-1px);
+}
+
+/* Statistics Table */
+.pqc-stats-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.pqc-stats-table th {
+    background: #f8f9fa;
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.pqc-stats-table td {
+    padding: 15px;
+    border-bottom: 1px solid #f1f3f4;
+}
+
+.pqc-stats-table tr:hover {
+    background: #f8f9fa;
+}
+
+.pqc-stats-table .number {
+    font-weight: bold;
+    color: #667eea;
+}
+
+/* Progress Bars */
+.pqc-progress {
+    width: 100%;
+    height: 20px;
+    background: #e9ecef;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.pqc-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    border-radius: 10px;
+    transition: width 0.3s ease;
+    position: relative;
+}
+
+.pqc-progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Alerts */
+.pqc-alert {
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+}
+
+.pqc-alert-success {
+    background: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+}
+
+.pqc-alert-warning {
+    background: #fff3cd;
+    color: #856404;
+    border-color: #ffeaa7;
+}
+
+.pqc-alert-danger {
+    background: #f8d7da;
+    color: #721c24;
+    border-color: #f5c6cb;
+}
+
+.pqc-alert-info {
+    background: #cce7f0;
+    color: #055160;
+    border-color: #b3d7e6;
+}
+
+/* Responsive Admin */
+@media (max-width: 768px) {
+    .pqc-admin-wrapper {
+        margin: 10px;
+    }
+
+    .pqc-admin-header {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .pqc-admin-header h1 {
+        font-size: 24px;
+    }
+
+    .pqc-stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pqc-settings-section {
+        padding: 20px;
+    }
+
+    .pqc-form-table th {
+        width: auto;
+        display: block;
+        padding: 10px 0 5px 0;
+    }
+
+    .pqc-form-table td {
+        display: block;
+        padding: 5px 0 15px 0;
+    }
+
+    .pqc-color-picker-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pqc-canvas-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pqc-btn {
+        width: 200px;
+        text-align: center;
+    }
+}
+
+/* Loading States */
+.pqc-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    color: #666;
+}
+
+.pqc-spinner {
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #667eea;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin-right: 15px;
+}
+
+/* Tooltips */
+.pqc-tooltip {
+    position: relative;
+    cursor: help;
+}
+
+.pqc-tooltip::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s;
+    z-index: 1000;
+}
+
+.pqc-tooltip:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+
+    .pqc-settings-section,
+    .pqc-stat-card,
+    .pqc-canvas-preview {
+        background: #2d3748;
+        color: #e2e8f0;
+    }
+
+    .pqc-stats-table th {
+        background: #4a5568;
+        color: #e2e8f0;
+    }
+
+    .pqc-form-table input,
+    .pqc-form-table select {
+        background: #4a5568;
+        color: #e2e8f0;
+        border-color: #718096;
+    }
+}
